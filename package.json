@@ -1,0 +1,22 @@
+{
+  "name": "Part1Google",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:html": "pug -o dest/ --pretty src/index.pug",
+    "html:realtime": "pug -o dest/ --pretty -w src/index.pug ",
+    "build:css": "node-sass src/styles/ -o dest/styles/  --output-style expanded",
+    "css:realtime": "node-sass src/styles/ -w -o dest/styles/ --output-style expanded",
+    "build:project": "npm run build:html && npm run build:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "node-sass": "^3.13.0",
+    "pug": "^2.0.0-beta6",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

@@ -13,6 +13,10 @@
 	color:#337ab7;
 
 }
+.nav1488 li:first-child a {
+	text-decoration:none;
+	color:black;
+}
 .nav2{
 	float:right;
 	
@@ -37,5 +41,56 @@ input{
 //Andrey end
 
 //Leon start
+.leo{
+	font-size:25px;
+}
+.buttons{
+	margin-top:10px
+	// background-color:black;
+	
+}
+.btnn{
+	border: 1px solid grey;
+	box-shadow: 1px 1px 0px 0.2px black;
+	text-align:center;
+	background-color:#c0c0c0;
+	height: 40px;
+}
+.button1{
+	
+	margin-right: 10px;
+	padding:0;
+	cursor: pointer;
+	user-select:none;
+}
+.btnn:active{
+	box-shadow: 1px 1px 0px 2px white;
 
+}
+
+.button2{
+	padding:0;
+	cursor: pointer;
+	user-select:none;
+}
+.adv{
+	margin-top:100px;
+}
+.navs  li{
+	display:inline-block;
+	padding-right:10px;
+}
+.copy{
+	margin-top: 20px;
+	text-align:center;
+	
+}
+.copy p{
+	font-size:20px;
+	margin-left:-100px;
+	display:inline-block;
+}
+.copy a{
+	font-size:20px;
+}
 //Leon end

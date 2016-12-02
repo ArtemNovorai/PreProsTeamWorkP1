@@ -8,13 +8,18 @@
     "html:realtime": "pug -o dest/ --pretty -w src/index.pug ",
     "build:css": "node-sass src/styles/ -o dest/styles/  --output-style expanded",
     "css:realtime": "node-sass src/styles/ -w -o dest/styles/ --output-style expanded",
-    "build:project": "npm run build:html && npm run build:css"
+    "copy:js": "copyfiles -f src/js/* dest/js/",
+   "copy:normalize": "copyfiles -f src/styles/normalize.css dest/styles/",
+   "copy:bootstrap": "copyfiles -f src/styles/bootstrap/* dest/styles/bootstrap/",
+   "copy:all": "npm run copy:js && npm run copy:normalize && npm run copy:bootstrap",
+    "build:project": "npm run build:html && npm run build:css && npm run copy:all"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bower": "^1.8.0",
+    "copyfiles": "^1.0.0",
     "node-sass": "^3.13.0",
     "pug": "^2.0.0-beta6",
     "pug-cli": "^1.0.0-alpha6"

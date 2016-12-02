@@ -1,29 +1,63 @@
 doctype html
-html(lang="en")
+html(lang='en')
 	head
 		meta(charset='utf-8')
-		title='PreProsTeamWorkPart1'
-		link(href='../src/styles/normalize.css' rel='stylesheet')
-		link(href='../src/styles/bootstrap/bootstrap.css' rel='stylesheet')
-		link(href='../src/styles/bootstrap/bootstrap-theme.css' rel='stylesheet')
-		link(href='styles/styles.css' rel='stylesheet')
+		title PreProsTeamWorkPart1
+		link(href='../src/styles/normalize.css', rel='stylesheet')
+		link(href='../src/styles/bootstrap/bootstrap.css', rel='stylesheet')
+		link(href='../src/styles/bootstrap/bootstrap-theme.css', rel='stylesheet')
+		link(href='styles/styles.css', rel='stylesheet')
 	body
-
-		//Andrey start
-
-
-
-		//Andrey end
-		
-		//######
-		//######
-
-		//Leon start
-
-
-
-		//Leon end
-
-
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-		script(src="../src/js/bootstrap.js" type="text/javascript")
+		// Andrey start
+		.container-fluid
+			.row
+				.col-md-6
+					.nav.nav1
+						ul
+							li
+								a.first(href='#') Web
+							li
+								a(href='#') Images
+							li
+								a(href='#') Videos
+							li
+								a(href='#') Maps
+							li
+								a(href='#') News
+							li
+								a(href='#') Shopping
+							li
+								a(href='#') Gmail
+							li
+								a(href='#') more 
+								span.glyphicon.glyphicon-triangle-bottom
+				.col-md-6
+					.nav1.nav2
+						ul
+							li
+								a(href='#')  iGoogle
+							li
+								a(href='#') Search settings
+							li
+								a(href='#') Sign in 
+		.container
+			.row
+				.col-md-12
+					img(src='https://farmingfirst.org/wordpress/wp-content/uploads/2009/04/google-logo.jpg', alt='Logo')
+		.container
+			.row
+				.col-md-10
+					input(type='search')
+				.col-md-2
+					.pos
+						a(href='#') Advanced Search
+					.pos
+						a(href='#') Language Tools
+		//
+			Andrey end
+			//######
+			//######
+			//Leon start
+			//Leon end
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+		script(src='../src/js/bootstrap.js', type='text/javascript')

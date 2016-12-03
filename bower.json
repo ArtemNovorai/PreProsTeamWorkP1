@@ -1,0 +1,21 @@
+{
+  "name": "Part1Google",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "PanLeon <leonpan77@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "normalize-css": "normalize.css#^5.0.0"
+  }
+}

@@ -1,29 +1,82 @@
 doctype html
-html(lang="en")
+html(lang='en')
 	head
 		meta(charset='utf-8')
-		title='PreProsTeamWorkPart1'
-		link(href='../src/styles/normalize.css' rel='stylesheet')
-		link(href='../src/styles/bootstrap/bootstrap.css' rel='stylesheet')
-		link(href='../src/styles/bootstrap/bootstrap-theme.css' rel='stylesheet')
-		link(href='styles/styles.css' rel='stylesheet')
+		title PreProsTeamWorkPart1
+		link(href='styles/normalize.css', rel='stylesheet')
+		link(href='styles/bootstrap/bootstrap.css', rel='stylesheet')
+		link(href='styles/bootstrap/bootstrap-theme.css', rel='stylesheet')
+		link(href='styles/styles.css', rel='stylesheet')
 	body
-
-		//Andrey start
-
-
-
-		//Andrey end
-		
-		//######
-		//######
-
-		//Leon start
-
-
-
-		//Leon end
-
-
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-		script(src="../src/js/bootstrap.js" type="text/javascript")
+		// Andrey start
+		.container-fluid
+			.row
+				.col-md-8
+					.nav.nav1.nav1488
+						ul
+							li
+								a(href='#') Web
+							li
+								a(href='#') Images
+							li
+								a(href='#') Videos
+							li
+								a(href='#') Maps
+							li
+								a(href='#') News
+							li
+								a(href='#') Shopping
+							li
+								a(href='#') Gmail
+							li
+								a(href='#') more 
+								span.glyphicon.glyphicon-triangle-bottom
+				.col-md-4
+					.nav1.nav2
+						ul
+							li
+								a(href='#')  iGoogle
+							li
+								a(href='#') Search settings
+							li
+								a(href='#') Sign in 
+		.container
+			.row
+				.col-md-12
+					img(src='https://farmingfirst.org/wordpress/wp-content/uploads/2009/04/google-logo.jpg', alt='Logo')
+		.container
+			.row
+				.col-md-10
+					input(type='search')
+				.col-md-2
+					.pos
+						a(href='#') Advanced Search
+					.pos
+						a(href='#') Language Tools
+			//Andrey end
+			//######
+			//######
+			//Leon start
+			.container.leo
+				.row.buttons
+					.col-xs-3.col-xs-offset-2.button1.btnn
+						p Google Search
+					.col-xs-3.button2.btnn
+						p I'm Feeling Lucky
+				.row.adv
+					.col-xs-12.navs
+						ul
+							li
+								a(href='#')  Advertising Programs
+							li
+								a(href='#')  Business Solution
+							li
+								a(href='#')  About Google
+							li
+								a(href='#')  Go to Google China
+				.row.copy
+					p &#169;2009 -
+					a(href='#')  Privacy
+			//Leon end
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+		script(src='js/bootstrap.js', type='text/javascript')

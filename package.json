@@ -4,19 +4,40 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "bower install && npm run build:project && npm run launch",
     "build:html": "pug -o dest/ --pretty src/index.pug",
     "html:realtime": "pug -o dest/ --pretty -w src/index.pug ",
+    "lint:html": "node_modules/.bin/htmlhint dest",
+    "lint:css": "stylelint dest/styles/*.css",
+    "prefix": "node_modules/.bin/postcss --use autoprefixer dest/styles/*.css --replace",
     "build:css": "node-sass src/styles/ -o dest/styles/  --output-style expanded",
     "css:realtime": "node-sass src/styles/ -w -o dest/styles/ --output-style expanded",
-    "build:project": "npm run build:html && npm run build:css"
+    "copy:js": "copyfiles -f bower_components/bootstrap/dist/js/bootstrap.js dest/js/",
+    "copy:normalize": "copyfiles -f bower_components/normalize-css/normalize.css dest/styles/ && copyfiles -f src/styles/.stylelintrc dest/styles/",
+    "copy:bootstrap": "copyfiles -f bower_components/bootstrap/dist/css/* dest/styles/bootstrap/",
+    "copy:all": "npm run copy:js && npm run copy:normalize && npm run copy:bootstrap",
+    "serve": "http-server dest/",
+    "open:server": "opn  http://127.0.0.1:8080",
+    "gh-pages": "gh-pages --dist dest/",
+    "launch": "concurrently \"npm run serve\" \"npm run open:server\"",
+    "build:project": "npm run build:html && npm run build:css &&  npm run copy:all && npm run lint:html && npm run lint:css && npm run prefix "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bower": "^1.8.0",
+    "concurrently": "^3.1.0",
+    "copyfiles": "^1.0.0",
+    "gh-pages": "^0.12.0",
+    "htmlhint": "^0.9.13",
+    "http-server": "^0.9.0",
     "node-sass": "^3.13.0",
+    "opn": "^4.0.2",
+    "opn-cli": "^3.1.0",
+    "postcss-cli": "^2.6.0",
     "pug": "^2.0.0-beta6",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "stylelint": "^7.6.0"
   }
 }

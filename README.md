@@ -4,5 +4,5 @@
 # npm run css:realtime -- monitor css
 #
 #npm run serve -- to run http-server
-#npm open:server -- to opent page in browser
+#npm run open:server -- to opent page in browser
 

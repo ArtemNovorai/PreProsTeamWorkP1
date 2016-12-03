@@ -15,7 +15,8 @@
     "copy:normalize": "copyfiles -f src/styles/normalize.css dest/styles/",
     "copy:bootstrap": "copyfiles -f src/styles/bootstrap/* dest/styles/bootstrap/",
     "copy:all": "npm run copy:js && npm run copy:normalize && npm run copy:bootstrap",
-    "open": "opn http://localhost:8080/",
+    "serv": " node_modules/.bin/http-server  dest",
+    "open": "opn  http://127.0.0.1:8080",
     "build:project": "npm run build:html && npm run build:css && npm run copy:all"
   },
   "keywords": [],
@@ -27,6 +28,8 @@
     "htmlhint": "^0.9.13",
     "http-server": "^0.9.0",
     "node-sass": "^3.13.0",
+    "opn": "^4.0.2",
+    "opn-cli": "^3.1.0",
     "postcss-cli": "^2.6.0",
     "pug": "^2.0.0-beta6",
     "pug-cli": "^1.0.0-alpha6",
